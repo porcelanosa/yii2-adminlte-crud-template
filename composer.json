@@ -1,0 +1,16 @@
+{
+    "name": "ceyhunism/yii2-gentellela-crud-template",
+    "description": "CRUD template to Gentellela integrated with yii2",
+    "keywords": ["yii2", "extension", "gii", "crud template"],
+    "homepage": "https://github.com/ceyhunism/yii2-gentellela-crud-template",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Ceyhun Ismayilzade",
+            "email": "ismayilzadeceyhun@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2-gii": "*"
+    }
+}
