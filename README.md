@@ -39,3 +39,13 @@ $config['modules']['gii'] = [
 ```````
 
 После этого при использовании CRUD в Gii в разделе "Code Template" необходимо выбрать соответствующий шаблон.
+
+##Flash cообщения
+Для использования flash сообщений в базовом контроллере, который расширяют другие контроллеры необходимо объявить функцию set_session
+
+```````
+protected function set_session($type, $message)
+{
+    Yii::$app->session->setFlash($type, Html::encode($message));
+}
+```````

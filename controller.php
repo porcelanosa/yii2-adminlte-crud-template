@@ -104,6 +104,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         $model = new <?= $modelClass ?>();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $this->set_session('success', 'Məlumat əlavə edildi');
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('create', [
@@ -123,6 +124,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         $model = $this->findModel(<?= $actionParams ?>);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $this->set_session('info', 'Məlumat uğurla yeniləndi');
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('update', [
@@ -140,7 +142,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     public function actionDelete(<?= $actionParams ?>)
     {
         $this->findModel(<?= $actionParams ?>)->delete();
-
+        $this->set_session('error', 'Məlumat silindi');
         return $this->redirect(['index']);
     }
 
