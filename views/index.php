@@ -13,6 +13,7 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
+use yiister\gentelella\widgets\Panel;
 use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
 
