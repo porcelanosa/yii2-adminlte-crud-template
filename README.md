@@ -1,4 +1,4 @@
-YII 2 Gentellela Admin CRUD
+YII 2 AdminLTE CRUD
 ==========================
 
 Gentellela Admin
